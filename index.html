@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top navigation bar -->
+  <div class="top-bar">
+    
+    
+    <!-- <div class="time-period">
+      <label for="period">View Period:</label>
+      <select id="period">
+        <option>All Time</option>
+        <option>Last 7 Days</option>
+        <option>Last 30 Days</option>
+        <option>This Month</option>
+        <option>Last Month</option>
+      </select>
+    </div> -->
+
+  
+
+    <!-- Add Transaction Button -->
+    <button id="add-transaction-btn">Add Transaction</button>
+  
+<!-- Transaction Modal -->
+<div id="transaction-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <h2>Add Transaction</h2>
+    <form id="transaction-form">
+
+      <button type="button" class="bubble-button" id="expenseSelector">Expense</button>
+      <button type="button" class="bubble-button" id="incomeSelector">Income</button>
+
+      <label for="amount">Amount:</label>
+      <input type="number" min="0" id="amount" name="amount" step="0.01" required>
+
+      <label for="category">Category:</label>
+      <select id="category" name="category">
+        <!-- Categories will be populated dynamically -->
+      </select>
+      <input type="text" id="new-category" placeholder="Or add new category">
+
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <button type="submit" class="modalSubmit" id="submitAddTrans" >Add Transaction</button>
+    </form>
+  </div>
+</div>
+
+<!-- Edit Transaction Modal -->
+<div id="editTransactionModal" class="modal">
+  <div class="modal-content">
+    <span id="closeEditModal" class="close">&times;</span>
+    <h2>Edit Transaction</h2>
+
+      <button class="bubble-button" id="expenseEditSelector">Expense</button>
+      <button class="bubble-button" id="incomeEditSelector">Income</button>
+
+    <form id="editTransactionForm">
+      
+      
+      <label for="amount">Amount:</label>
+      <input type="number" id="editAmount" name="amount" step="0.01" required>
+
+      <label for="category">Category:</label>
+      <select id="editCategory" name="category" required>
+        <!-- Categories populated in main.js -->
+      </select>
+      <input type="text" id="editNewCategory" placeholder="Or add new category">
+
+      <label for="description">Description:</label>
+      <input type="text" id="editDescription" name="description" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="editDate" name="date" required>
+
+      
+      <button type="button" class = "modalSubmit" id="submitEditTrans" >Edit Transaction</button>
+      <button type="button" class = "modalDelete" id="deleteTrans" formnovalidate>Delete</button>
+     
+    
+    </form>
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Transaction cards -->
+  <div class="transaction-container">
+  
+
+    <!-- Cards are added here -->
+
+
+    
+
+  </div>
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>

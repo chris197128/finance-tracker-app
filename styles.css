@@ -1,0 +1,218 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top navigation bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.top-bar .time-period {
+    flex: 1;
+    text-align: center;
+}
+
+.top-bar button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.top-bar button:hover {
+    background-color: #2ecc71;
+}
+
+/* Container for transactions */
+.transaction-container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Transaction card */
+.transaction-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.transaction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.transaction-card .top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.transaction-card .description {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.transaction-card .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.transaction-card .amount {
+    font-weight: bold;
+}
+
+/* color coding for expense or income */
+.transaction-card.expense .amount {
+    color: #e74c3c;
+}
+
+.transaction-card.income .amount {
+    color: #27ae60;
+}
+
+
+.transaction-card .edit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.transaction-card .edit-btn:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+/* Modal overlay */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+/* darkens when hovering */
+.close:hover {
+    color: #333;
+}
+
+
+/* Add transacion Form fields */
+#transaction-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+#transaction-form input,
+#transaction-form select {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+#transaction-form button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.modal .bubble-button {
+    background-color: rgba(128, 128, 128, 0.667);
+
+}
+
+.modal .selected-button{
+    background-color: #2980b9;
+}
+
+.modal .bubble-button:hover {
+    background-color: #2980b9;
+}
+
+
+/* form fields for the edit transaction modal */
+#editTransactionForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+#editTransactionForm input,
+#editTransactionForm select {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+#editTransactionForm button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.modal .modal-content .modalDelete {
+    background-color: #f00b0b;
+    
+}
+
+
+
